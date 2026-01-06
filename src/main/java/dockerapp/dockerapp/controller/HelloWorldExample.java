@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/api")
 public class HelloWorldExample {
 
-    @GetMapping
-    public String getMessage(){
-        System.out.println("##########################");
-        return "Hello World from psa";
+    @GetMapping("/hello")
+    public String getMessage() {
+        return "Hello World from Docker + Spring Boot";
     }
 }
